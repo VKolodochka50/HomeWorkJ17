@@ -3,21 +3,31 @@ package de.telran;
 import java.util.Scanner;
 
 public class Main {
+   // static int defaultInt = 345;
+
     public static void main(String[] args) {
+        System.out.println("Please enter any 3 digit positive integer: ");
         Scanner scan = new Scanner(System.in);
-        int userInt = scan.nextInt();
-        int defaultInt = 345;
-
-        if (userInt == 0 ) {
-            System.out.println("You are not provided a value, app will evaluate default value" + defaultInt);
-           return;
-        }
-
-        int evalLastInt = defaultInt % 10;
-        int evalMidInt = defaultInt / 10 % 10;
-        int evalFirstInt = defaultInt / 100;
+        int defaultInt = scan.nextInt();
 
 
-        System.out.println("Hello world!");
+        System.out.println("Your numbers is :" +defaultInt);
+        System.out.println("Which means : " + countFirstInt(defaultInt) + ", " + countMidInt(defaultInt) + ", " + countLastInt(defaultInt));
+
     }
+
+    static int countFirstInt (int myInt) {
+             return myInt / 100;
+        }
+    static int countMidInt (int myInt)       {
+    return myInt / 10 % 10;
+    }
+    static int countLastInt (int myInt) {
+        return myInt % 10;
+    }
+
 }
+
+//Дано трехзначное число. Вывести на экран все цифры этого числа
+//Пример: 345
+//Вывод в консоль: Число 345 -> 3, 4, 5
