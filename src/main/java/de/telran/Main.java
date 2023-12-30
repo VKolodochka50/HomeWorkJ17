@@ -9,7 +9,7 @@ public class Main {
         int defaultInt = 345;
 
         if (userInt == 0 ) {
-            System.out.println("You are not provided a value, app will evaluate default value" + defaultInt);
+            System.out.println("You are not provided your own value, app will evaluate default value" + defaultInt);
            return;
         }
 
